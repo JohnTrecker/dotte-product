@@ -1,0 +1,105 @@
+.secondaryCta {
+  background: var(--bg);
+  border-top: 1px solid var(--border);
+}
+
+.inner {
+  max-width: 680px;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* ─── Avatar Row ─────────────────────────────────────────── */
+
+.avatarRow {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.avatars {
+  display: flex;
+}
+
+.avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--surface);
+  border: 2px solid var(--bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-mono);
+  font-size: 0.6rem;
+  font-weight: 500;
+  color: var(--amber);
+  margin-left: -8px;
+  flex-shrink: 0;
+}
+
+.avatar:first-child {
+  margin-left: 0;
+}
+
+.avatarLabel {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.04em;
+  color: var(--text-muted);
+  max-width: unset;
+}
+
+.avatarLabel strong {
+  color: var(--text-secondary);
+}
+
+/* ─── Text ───────────────────────────────────────────────── */
+
+.textBlock {
+  display: flex;
+  flex-direction: column;
+}
+
+.ctaTitle {
+  margin-bottom: 1rem;
+}
+
+.ctaBody {
+  color: var(--text-secondary);
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+/* ─── Actions ────────────────────────────────────────────── */
+
+.actions {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+/* ─── Perks ──────────────────────────────────────────────── */
+
+.perks {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.perk {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.04em;
+  color: var(--text-secondary);
+}
+
+.checkmark {
+  color: var(--amber);
+  flex-shrink: 0;
+}

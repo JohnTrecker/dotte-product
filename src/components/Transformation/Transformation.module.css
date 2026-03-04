@@ -1,0 +1,141 @@
+.transformation {
+  background: var(--bg-elevated);
+  border-top: 1px solid var(--border);
+}
+
+.header {
+  max-width: 640px;
+  margin-bottom: 3.5rem;
+}
+
+.intro {
+  color: var(--text-secondary);
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+/* ─── Timeline ───────────────────────────────────────────── */
+
+.timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.stage {
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  gap: 2rem;
+  padding-bottom: 2.5rem;
+}
+
+.stageNumber {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+  padding-top: 0.2rem;
+}
+
+.phaseLabel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border: 1px solid var(--border-bright);
+  background: var(--bg-card);
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  color: var(--amber);
+  flex-shrink: 0;
+  transition: background 0.2s, border-color 0.2s;
+}
+
+.stage:hover .phaseLabel {
+  background: var(--amber-glow);
+  border-color: rgba(245, 158, 11, 0.5);
+}
+
+.connector {
+  width: 1px;
+  flex: 1;
+  min-height: 2rem;
+  background: var(--border);
+  margin: 0.5rem 0;
+}
+
+.stageContent {
+  padding-bottom: 2.5rem;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.stage:last-child .stageContent {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.stageMeta {
+  display: flex;
+  align-items: baseline;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.stageTitle {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.stageDuration {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--amber);
+  background: var(--amber-glow);
+  border: 1px solid rgba(245, 158, 11, 0.2);
+  padding: 0.2rem 0.6rem;
+}
+
+.stageDesc {
+  font-size: 0.95rem;
+  line-height: 1.75;
+  color: var(--text-secondary);
+  max-width: 56ch;
+}
+
+.stageDetail {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.08em;
+  color: var(--text-muted);
+}
+
+/* ─── Responsive ─────────────────────────────────────────── */
+
+@media (max-width: 560px) {
+  .stage {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .stageNumber {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .connector {
+    width: 2rem;
+    height: 1px;
+    min-height: unset;
+    margin: 0 0.5rem;
+  }
+}

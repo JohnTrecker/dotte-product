@@ -1,0 +1,275 @@
+.hero {
+  position: relative;
+  min-height: 100svh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  padding-top: 5rem; /* nav height offset */
+}
+
+/* ─── Canvas Layers ──────────────────────────────────────── */
+
+.bgCanvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  opacity: 0.6;
+}
+
+.cvCanvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.vignette {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  background: radial-gradient(
+    ellipse 80% 60% at 50% 50%,
+    transparent 20%,
+    rgba(10, 10, 10, 0.7) 100%
+  );
+  pointer-events: none;
+}
+
+/* ─── Content ────────────────────────────────────────────── */
+
+.content {
+  position: relative;
+  z-index: 3;
+  padding-block: clamp(4rem, 10vh, 7rem);
+  max-width: 760px;
+}
+
+.badge {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.badgeText {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.headline {
+  margin-bottom: 1.5rem;
+  line-height: 1;
+}
+
+.headlineAccent {
+  color: var(--amber);
+}
+
+.subhead {
+  font-size: clamp(1rem, 1.5vw, 1.2rem);
+  color: var(--text-secondary);
+  line-height: 1.7;
+  margin-bottom: 2.5rem;
+  max-width: 56ch;
+}
+
+/* ─── Trust Signals ──────────────────────────────────────── */
+
+.signals {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 2.5rem;
+  flex-wrap: wrap;
+}
+
+.signal {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.signalValue {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  line-height: 1;
+}
+
+.signalLabel {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  max-width: 14ch;
+}
+
+.signalDivider {
+  width: 1px;
+  height: 40px;
+  background: var(--border);
+  flex-shrink: 0;
+}
+
+/* ─── Form ───────────────────────────────────────────────── */
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.formRow {
+  display: flex;
+  gap: 0;
+  max-width: 540px;
+}
+
+.emailInput {
+  flex: 1;
+  padding: 0.875rem 1.25rem;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--border-bright);
+  border-right: none;
+  color: var(--text-primary);
+  font-size: 0.95rem;
+  outline: none;
+  transition: border-color 0.2s;
+  min-width: 0;
+}
+
+.emailInput::placeholder {
+  color: var(--text-muted);
+}
+
+.emailInput:focus {
+  border-color: var(--amber);
+  background: rgba(245, 158, 11, 0.04);
+}
+
+.emailInput:disabled {
+  opacity: 0.6;
+}
+
+.submitBtn {
+  white-space: nowrap;
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.submitBtn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.spinner {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  border: 2px solid rgba(0, 0, 0, 0.3);
+  border-top-color: #000;
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.errorMsg {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--red);
+  max-width: 540px;
+}
+
+.formDisclaimer {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.05em;
+  color: var(--text-muted);
+  max-width: unset;
+}
+
+/* ─── Success State ──────────────────────────────────────── */
+
+.successState {
+  display: flex;
+  align-items: center;
+  gap: 0.875rem;
+  padding: 1rem 1.25rem;
+  border: 1px solid rgba(34, 197, 94, 0.3);
+  background: rgba(34, 197, 94, 0.06);
+  max-width: 480px;
+}
+
+.successIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  background: rgba(34, 197, 94, 0.15);
+  color: var(--green);
+  flex-shrink: 0;
+}
+
+.successText {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  max-width: unset;
+}
+
+.successText strong {
+  color: var(--green);
+}
+
+/* ─── Bottom Fade ────────────────────────────────────────── */
+
+.bottomFade {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 160px;
+  z-index: 4;
+  background: linear-gradient(to bottom, transparent, var(--bg));
+  pointer-events: none;
+}
+
+/* ─── Responsive ─────────────────────────────────────────── */
+
+@media (max-width: 640px) {
+  .formRow {
+    flex-direction: column;
+  }
+
+  .emailInput {
+    border-right: 1px solid var(--border-bright);
+    border-bottom: none;
+  }
+
+  .emailInput:focus {
+    border-color: var(--amber);
+    border-bottom: none;
+  }
+
+  .signals {
+    gap: 1rem;
+  }
+
+  .signalDivider {
+    display: none;
+  }
+}

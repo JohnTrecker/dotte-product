@@ -1,0 +1,131 @@
+.valueStack {
+  background: var(--bg-elevated);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+.headerRow {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 2rem;
+  margin-bottom: 2.5rem;
+  flex-wrap: wrap;
+}
+
+.headerText {
+  flex: 1;
+  min-width: 260px;
+}
+
+/* ─── Toggle ─────────────────────────────────────────────── */
+
+.toggle {
+  display: flex;
+  border: 1px solid var(--border-bright);
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.toggleBtn {
+  padding: 0.6rem 1.5rem;
+  font-family: var(--font-display);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  background: transparent;
+  border: none;
+  transition: background 0.2s, color 0.2s;
+  cursor: pointer;
+}
+
+.toggleBtn.active {
+  background: var(--amber);
+  color: #000;
+}
+
+/* ─── Table ──────────────────────────────────────────────── */
+
+.tableWrapper {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+
+.thFeature {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  text-align: left;
+  padding: 0.75rem 1rem 0.75rem 0;
+  border-bottom: 1px solid var(--border);
+  width: 30%;
+}
+
+.th {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  text-align: left;
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid var(--border);
+  transition: color 0.2s;
+}
+
+.thHighlight {
+  color: var(--amber);
+}
+
+.row {
+  border-bottom: 1px solid var(--border);
+  transition: background 0.15s;
+}
+
+.row:hover {
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.tdFeature {
+  padding: 1rem 1rem 1rem 0;
+  font-family: var(--font-display);
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  vertical-align: middle;
+}
+
+.td {
+  padding: 1rem;
+  vertical-align: middle;
+  color: var(--text-secondary);
+  transition: color 0.2s, opacity 0.2s;
+}
+
+.tdDim {
+  opacity: 0.4;
+}
+
+.tdHighlight {
+  opacity: 1;
+}
+
+.badBefore {
+  color: var(--red);
+  font-weight: 500;
+}
+
+.goodAfter {
+  color: var(--green);
+  font-weight: 500;
+}
