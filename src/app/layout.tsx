@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { Barlow_Condensed, Barlow, IBM_Plex_Mono } from 'next/font/google'
+import { Analytics } from "@vercel/analytics/next"
 import Nav from '@/components/Nav/Nav'
 import ScrollRevealInit from '@/components/ScrollRevealInit/ScrollRevealInit'
 import './globals.css'
@@ -59,6 +60,7 @@ export default function RootLayout({
         <Nav />
         <ScrollRevealInit />
         {children}
+        <Analytics/>
       </body>
     </html>
   )
