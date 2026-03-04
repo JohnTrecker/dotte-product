@@ -26,8 +26,8 @@ export default function Footer() {
             </div>
             <div className={styles.linkGroup}>
               <span className={styles.linkGroupLabel}>Company</span>
-              <a href="mailto:hello@dotte.ai" className={styles.link}>Contact</a>
-              <a href="mailto:careers@dotte.ai" className={styles.link}>Careers</a>
+              <a href="mailto:hello@dotteproduct.com" className={styles.link}>Contact</a>
+              <a href="mailto:careers@dotteproduct.com" className={styles.link}>Careers</a>
             </div>
           </nav>
         </div>

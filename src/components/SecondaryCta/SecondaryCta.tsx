@@ -40,7 +40,7 @@ export default function SecondaryCta() {
             <a href="#hero" className="btn-primary">
               Secure Your Spot
             </a>
-            <a href="mailto:hello@dotte.ai" className="btn-outline">
+            <a href="mailto:hello@dotteproduct.com" className="btn-outline">
               Talk to Sales
             </a>
           </div>
